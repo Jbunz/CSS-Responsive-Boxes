@@ -1,3 +1,38 @@
 body {
   background: peachpuff;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.a{
+  background-color: red;
+  width: 100px;
+}
+.b {
+  background-color: aqua;
+  width: 50px;
+}
+
+.container div {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+@media (max-width: 600px) {
+  .container div {
+    width: calc(50% - 10px);
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container div {
+    width: calc(33.33% - 10px);
+  }
+
+}
